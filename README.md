@@ -1,6 +1,6 @@
 # Eccentric 2048
 
-[**Play the Game Live**](https://kivilcimlab.org/2048)
+[**Play the Game Live**](https://kivilcimlab.org/2048/)
 
 A 2048-style tile sliding game targeting 65,536 where the player can take control or hand it to a built-in AI. 
 
