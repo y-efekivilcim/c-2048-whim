@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>65536</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wave-container">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+
+  <div class="container">
+    <main class="play-area">
+      <header>
+        <div class="title-container">
+          <h1>sixty five thousand<br>five hundred thirty six.</h1>
+          <div class="score-container">
+            <div class="score-box">
+              <span class="score-label">SCORE</span>
+              <span id="score">0</span>
+            </div>
+            <div class="score-box">
+              <span class="score-label">BEST</span>
+              <span id="best-score">0</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="controls">
+        <button id="btn-player" class="active">I'll play</button>
+        <button id="btn-ai">Let AI play</button>
+      </div>
+
+      <div class="game-wrapper">
+        <div class="indicator-wrapper">
+          <svg class="indicator-arrow" id="ai-arrow" viewBox="0 0 24 24">
+            <defs>
+              <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path d="M12 2L12 22M12 2L5 9M12 2L19 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" filter="url(#neon-glow)" />
+          </svg>
+        </div>
+
+        <div class="game-container">
+          <div class="grid" id="grid"></div>
+          <div class="tile-container" id="tile-container"></div>
+          <div class="game-message" id="game-message">
+            <p></p>
+            <div class="lower">
+              <button class="retry-button">Try again</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="ai-panel glass-panel" id="ai-panel">
+          <h3>Evaluation Intelligence</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-label">Thinking Ahead</span>
+              <span class="stat-value" id="ai-depth">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Scenarios Checked</span>
+              <span class="stat-value" id="ai-nodes">0</span>
+            </div>
+          </div>
+          <div class="moves-eval">
+            <span class="stat-label" style="margin-top:10px;text-align:center;">Move Quality</span>
+            <div class="eval-row" id="eval-up">
+              <span class="dir">UP</span>
+              <span class="val">---</span>
+            </div>
+            <div class="eval-row" id="eval-right">
+              <span class="dir">RIGHT</span>
+              <span class="val">---</span>
+            </div>
+            <div class="eval-row" id="eval-down">
+              <span class="dir">DOWN</span>
+              <span class="val">---</span>
+            </div>
+            <div class="eval-row" id="eval-left">
+              <span class="dir">LEFT</span>
+              <span class="val">---</span>
+            </div>
+          </div>
+          <div class="best-move">
+            <span>Chosen Action: </span><strong id="ai-action">WAITING</strong>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
