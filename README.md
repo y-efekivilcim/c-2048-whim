@@ -1,6 +1,6 @@
-# Eccentric 2048
+# 2048 Whim
 
-[**Play the Game Live**](https://kivilcimlab.org/2048/)
+[**Play the Game Live**](https://kivilcimlab.org/2048-whim/)
 
 A 2048-style tile sliding game targeting 65,536 where the player can take control or hand it to a built-in AI. 
 
@@ -15,6 +15,6 @@ This project uses vanilla HTML, CSS, and JavaScript with no build steps required
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/y-efekivilcim/c-2048.git
+   git clone https://github.com/y-efekivilcim/c-2048-whim.git
    ```
 2. Open `index.html` in any web browser to play.
